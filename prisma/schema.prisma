@@ -19,6 +19,10 @@ model Ingredient {
 model Product {
   id            Int                 @id @default(autoincrement())
   name          String              @unique
+  category      String
+  preparation   String
+  ovenTempC     Int?
+  ovenMinutes   Int?
   ingredientLinks ProductIngredient[]
   createdAt     DateTime            @default(now())
   updatedAt     DateTime            @updatedAt
